@@ -15,23 +15,14 @@ export default (env: Env) => {
     entry: path.resolve(__dirname, "src", "index.tsx"),
     output: {
       path: path.resolve(__dirname, "build"),
-      filename: "[name].[contenthash].js",
+      filename: "[name].js",
       clean: true,
     },
     module: {
       rules: [
         {
           test: /\.s[ac]ss$/i,
-          use: [
-            MiniCssExtractPlugin.loader,
-            {
-              loader: "css-loader",
-              options: {
-                modules: true,
-              },
-            },
-            "sass-loader",
-          ],
+          use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
         },
         ,
         {
@@ -49,8 +40,8 @@ export default (env: Env) => {
         template: path.resolve(__dirname, "public", "index.html"),
       }),
       new MiniCssExtractPlugin({
-        filename: "css/[name].[contenthash].css",
-        chunkFilename: "css/[name].[contenthash].css",
+        filename: "css/[name].css",
+        chunkFilename: "css/[name].css",
       }),
     ],
     devServer: {

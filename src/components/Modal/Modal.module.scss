@@ -1,0 +1,38 @@
+.wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  height: 70vh;
+  width: 70vw;
+  background-color: aliceblue;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 1rem;
+}
+
+.error {
+  color: red;
+}
