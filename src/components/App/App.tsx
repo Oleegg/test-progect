@@ -16,7 +16,7 @@ export const App = () => {
 
   return (
     <div className="wrapper">
-      {isOpen && <Modal data={data} setIsOpen={setIsOpen} />}
+      <Modal data={data} setIsOpen={setIsOpen} isOpen={isOpen} />
       <header>
         <h1 className="title">Test</h1>
       </header>
